@@ -4,4 +4,4 @@ project(222 C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(222
-    "RUSSELL DE VRIES.c")
+    "Project 1.c")
