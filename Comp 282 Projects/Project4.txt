@@ -1,0 +1,55 @@
+CREATE TABLE Textbook(
+	title TEXT,
+	ISBN BIGINT,
+	pageCount INTEGER,
+	price REAL,
+	copyright TEXT,
+	edition INTEGER,
+	printDate DATE,
+	publisherID INTEGER
+);
+
+CREATE TABLE Publisher(
+	publisherID INTEGER,
+	name TEXT,
+	email TEXT
+);
+
+CREATE TABLE Author(
+	authorID INTEGER,
+	firstName TEXT,
+	lastName TEXT,
+	email TEXT
+);
+
+CREATE TABLE AuthorXBook(
+	ISBN BIGINT,
+	authorID INTEGER
+);
+
+//BOOK 1
+INSERT INTO Textbook (title, ISBN, pageCount, price, copyright, edition, printDate, publisherID)
+VALUES ('Data Abstraction & Problem Solving with Java: Walls and Mirrors 3rd Edition', 0132122308, 960, 170.66, ?, 3, '2010-10-20', ?);
+
+INSERT INTO Publisher(publisherID, name, email)
+VALUES (?, 'Addison Wesley',  'kate.gittins@pearson.com');
+
+INSERT INTO Author(authorID, firstName, lastName, email)
+VALUes (?, 'Janet', 'Prichard', 'JANET.PRITCHARD@UCONN.EDU');
+
+INSERT INTO AuthorXBook(ISBN, authorID)
+VALUES (0132122308, ?);
+
+//BOOK 2
+INSERT INTO Textbook (title, ISBN, pageCount, price, copyright, edition, printDate, publisherID)
+VALUES ('Discrete Mathematics and Its Applications', 1260091996, 1072, 88.32, ?, 7, '2011-06-14', ?);
+
+INSERT INTO Publisher(publisherID, name, email)
+VALUES (?, 'McGraw Hill',  '?');
+
+INSERT INTO Author(authorID, firstName, lastName, email)
+VALUes (?, 'Kenneth', 'Rosen', '?');
+
+INSERT INTO AuthorXBook(ISBN, authorID)
+VALUES (1260091996, ?);
+
